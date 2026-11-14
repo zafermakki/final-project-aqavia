@@ -1,12 +1,14 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import AuthLayout from "../../components/auth/AuthLayout";
 import AuthField from "../../components/auth/AuthField";
 import AuthIcon from "../../components/auth/AuthIcon";
 
 function SignUp() {
+  const navigate = useNavigate();
+
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -18,8 +20,8 @@ function SignUp() {
       setMessage("Passwords do not match!");
       return;
     }
+    navigate("/verification");
 
-    setMessage("Registration form is ready to connect to the API.");
   };
 
   return (
