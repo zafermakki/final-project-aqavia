@@ -1,0 +1,37 @@
+
+.section-placeholder {
+  width: 100%;
+}
+
+.section-placeholder-heading {
+  margin-bottom: 24px;
+}
+
+.section-placeholder-heading h1 {
+  margin-bottom: 9px;
+  font-size: 23px;
+  color: #273344;
+}
+
+.section-placeholder-heading p {
+  font-size: 13px;
+  color: #8993a2;
+}
+
+.section-placeholder-content {
+  min-height: 180px;
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+  border: 1px solid #e8ebef;
+  border-left-width: 3px;
+  border-radius: 10px;
+}
+
+.section-placeholder-content p {
+  font-size: 13px;
+  color: #8993a2;
+}

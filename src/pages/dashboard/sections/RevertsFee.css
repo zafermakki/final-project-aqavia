@@ -1,0 +1,474 @@
+
+/* =========================================
+   REVERTS & FEE PAGE
+========================================= */
+
+.revenue-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  color: #303947;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.revenue-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 27px;
+}
+
+.revenue-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #293646;
+}
+
+.revenue-title h1 {
+  font-size: 22px;
+  font-weight: 750;
+}
+
+/* =========================================
+   REVENUE STATISTICS
+========================================= */
+
+.revenue-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+
+  margin-bottom: 24px;
+}
+
+.revenue-card {
+  min-width: 0;
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 14px 15px;
+
+  border: 1px solid transparent;
+  border-radius: 12px;
+
+  transition: transform 0.2s ease;
+}
+
+.revenue-card:hover {
+  transform: translateY(-2px);
+}
+
+.revenue-card-info {
+  min-width: 0;
+}
+
+.revenue-card-info p {
+  margin-bottom: 9px;
+
+  color: #354052;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.revenue-card-info h3 {
+  margin-bottom: 7px;
+
+  color: #273344;
+  font-size: 17px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.revenue-card-info span {
+  display: block;
+
+  color: #647080;
+  font-size: 9px;
+  line-height: 14px;
+}
+
+.revenue-card-icon {
+  flex-shrink: 0;
+  color: #303947;
+}
+
+/* Card Colors */
+
+.revenue-blue {
+  background: #dce7fc;
+  border-color: #b9cbf8;
+}
+
+.revenue-gray {
+  background: #dedede;
+  border-color: #bcbcbc;
+}
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.revenue-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 216px;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 24px;
+}
+
+/* Search */
+
+.revenue-search {
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 0 11px;
+
+  background: #ffffff;
+  border: 1px solid #d9dee6;
+  border-radius: 8px;
+
+  color: #687487;
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.revenue-search:focus-within {
+  border-color: #f4510b;
+  box-shadow: 0 0 0 2px rgba(244, 81, 11, 0.08);
+}
+
+.revenue-search input {
+  width: 100%;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: #303947;
+  font-size: 11px;
+}
+
+.revenue-search input::placeholder {
+  color: #8993a2;
+}
+
+/* Period Tabs */
+
+.revenue-period-tabs {
+  height: 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid #f0a083;
+  border-radius: 7px;
+}
+
+.revenue-period-tabs button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 10px;
+
+  color: #424c5a;
+  background: transparent;
+  border: none;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  transition: background 0.2s, color 0.2s;
+}
+
+.revenue-period-tabs button:hover:not(.active) {
+  background: #fff0e9;
+}
+
+.revenue-period-tabs button.active {
+  color: #ffffff;
+  background: #f4510b;
+  font-weight: 600;
+}
+
+/* =========================================
+   TABLE SECTION
+========================================= */
+
+.revenue-table-section {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.revenue-table-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8px 13px;
+}
+
+.revenue-table-heading h2 {
+  color: #303947;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.revenue-table-heading span {
+  color: #8993a2;
+  font-size: 10px;
+}
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.revenue-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+
+  border: 1px solid #e4e7ed;
+  border-radius: 11px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c4cad3 transparent;
+}
+
+/* =========================================
+   REVENUE TABLE
+========================================= */
+
+.revenue-table {
+  width: 100%;
+  min-width: 570px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  text-align: center;
+  font-size: 11px;
+}
+
+.revenue-table thead {
+  background: #4d5c71;
+  color: #ffffff;
+}
+
+.revenue-table th {
+  height: 40px;
+  padding: 0 12px;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.revenue-table th:first-child {
+  border-top-left-radius: 9px;
+}
+
+.revenue-table th:last-child {
+  border-top-right-radius: 9px;
+}
+
+.revenue-table tbody td {
+  height: 59px;
+  padding: 10px 12px;
+
+  color: #303947;
+  font-size: 11px;
+  white-space: nowrap;
+
+  border-bottom: 1px solid #e7e9ed;
+}
+
+.revenue-table tbody tr {
+  transition: background 0.2s;
+}
+
+.revenue-table tbody tr:hover td {
+  background: #fafbfc;
+}
+
+.revenue-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================
+   TOTAL BADGE
+========================================= */
+
+.revenue-total-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 9px;
+
+  background: #737373;
+  color: #ffffff;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* =========================================
+   TABLE FOOTER
+========================================= */
+
+.revenue-table tfoot td {
+  height: 53px;
+  padding: 10px 12px;
+
+  background: #f6f7f9;
+  border-top: 1px solid #dfe3e9;
+
+  color: #303947;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.revenue-table tfoot td:first-child {
+  text-align: left;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.revenue-empty-state {
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #8993a2;
+}
+
+.revenue-empty-state h3 {
+  color: #344054;
+  font-size: 14px;
+}
+
+.revenue-empty-state p {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .revenue-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .revenue-cards .revenue-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 650px) {
+  .revenue-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue-period-tabs {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .revenue-title h1 {
+    font-size: 19px;
+  }
+
+  .revenue-header {
+    margin-bottom: 20px;
+  }
+
+  .revenue-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .revenue-cards .revenue-card:last-child {
+    grid-column: auto;
+  }
+
+  .revenue-card {
+    min-height: 92px;
+    padding: 12px;
+  }
+
+  .revenue-card-info p {
+    font-size: 10px;
+  }
+
+  .revenue-card-info h3 {
+    font-size: 16px;
+  }
+
+  .revenue-card-info span {
+    font-size: 9px;
+  }
+
+  .revenue-card-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .revenue-period-tabs {
+    height: 39px;
+  }
+
+  .revenue-table-heading h2 {
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   PRINT
+========================================= */
+
+@media print {
+  .dashboard-sidebar,
+  .dashboard-topbar,
+  .revenue-toolbar {
+    display: none !important;
+  }
+
+  .dashboard-content {
+    padding: 0 !important;
+  }
+}

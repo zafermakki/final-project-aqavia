@@ -1,0 +1,263 @@
+
+/* =================================
+   DASHBOARD HEADING
+================================= */
+
+.dashboard-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.dashboard-heading {
+  margin-bottom: 24px;
+}
+
+.dashboard-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 10px;
+
+  color: #273344;
+}
+
+.dashboard-title h1 {
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.dashboard-heading h2 {
+  font-size: 16px;
+  font-weight: 650;
+  color: #333d4c;
+
+  margin-bottom: 13px;
+}
+
+.dashboard-heading > p {
+  font-size: 12px;
+  color: #727d8b;
+}
+
+.dashboard-heading > p span {
+  margin-left: 7px;
+  color: #303947;
+  font-weight: 600;
+}
+
+/* =================================
+   STATISTICS GRID
+================================= */
+
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+
+  margin-bottom: 22px;
+}
+
+/* =================================
+   BOTTOM CONTENT
+================================= */
+
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 16px;
+
+  align-items: start;
+}
+
+/* =================================
+   ORDERS TABLE
+================================= */
+
+.orders-panel,
+.drivers-panel {
+  min-width: 0;
+
+  padding: 17px;
+
+  background: #ffffff;
+  border: 1px solid #e6e9ee;
+  border-radius: 13px;
+}
+
+.panel-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #303947;
+
+  margin-bottom: 14px;
+}
+
+.orders-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  font-size: 12px;
+}
+
+.orders-table thead {
+  background: #4a586d;
+  color: #ffffff;
+}
+
+.orders-table th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.orders-table td {
+  padding: 17px 15px;
+
+  color: #344054;
+  border-bottom: 1px solid #edf0f3;
+}
+
+/* =================================
+   ACTIVE DRIVERS
+================================= */
+
+.drivers-panel {
+  padding: 16px;
+}
+
+.drivers-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.drivers-panel-heading h3 {
+  font-size: 14px;
+  color: #303947;
+}
+
+.online-badge {
+  padding: 4px 8px;
+
+  background: #e2f8e9;
+  color: #24a45b;
+
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.drivers-description {
+  margin: 12px 0;
+
+  font-size: 10px;
+  line-height: 16px;
+  color: #8993a2;
+}
+
+.active-drivers-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.active-driver {
+  min-height: 57px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  padding: 9px 0;
+
+  border-top: 1px solid #edf0f3;
+}
+
+.driver-information {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  min-width: 0;
+}
+
+.driver-information strong {
+  font-size: 11px;
+  color: #344054;
+}
+
+.driver-information span {
+  font-size: 9px;
+  color: #8993a2;
+}
+
+.driver-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.driver-actions span {
+  padding: 4px 8px;
+  border-radius: 12px;
+
+  font-size: 9px;
+  color: #ffffff;
+}
+
+.driver-car {
+  background: #6092f2;
+}
+
+.driver-busy {
+  background: #f7b443;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1100px) {
+  .statistics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-bottom {
+    grid-template-columns: minmax(0, 1fr) 240px;
+  }
+}
+
+@media (max-width: 760px) {
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .drivers-panel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .statistics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-title h1 {
+    font-size: 19px;
+  }
+
+  .dashboard-heading h2 {
+    font-size: 14px;
+  }
+
+  .stat-card {
+    min-height: 95px;
+  }
+}
