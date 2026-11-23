@@ -1,0 +1,982 @@
+
+/* =========================================
+   DRIVER REPORTS PAGE
+========================================= */
+
+.driver-reports-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  color: #303947;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.driver-report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 23px;
+}
+
+.driver-report-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #283342;
+}
+
+.driver-report-title h1 {
+  font-size: 21px;
+  font-weight: 750;
+}
+
+.driver-report-back {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #687487;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.driver-report-back:hover {
+  color: #f4510b;
+}
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.driver-report-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+  margin-bottom: 20px;
+}
+
+.driver-report-stat {
+  min-width: 0;
+  min-height: 91px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.driver-report-stat:hover {
+  transform: translateY(-2px);
+}
+
+.driver-report-stat > div {
+  min-width: 0;
+}
+
+.driver-report-stat p {
+  margin-bottom: 8px;
+  color: #354052;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.driver-report-stat h3 {
+  margin-bottom: 5px;
+  color: #273344;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.driver-report-stat span {
+  display: block;
+  color: #647080;
+  font-size: 9px;
+  line-height: 14px;
+}
+
+.driver-report-stat > svg {
+  flex-shrink: 0;
+  color: #303947;
+}
+
+.driver-report-stat.stat-green {
+  background: #dcf7e7;
+  border-color: #b5ebc9;
+}
+
+.driver-report-stat.stat-gray {
+  background: #dedede;
+  border-color: #bcbcbc;
+}
+
+.driver-report-stat.stat-blue {
+  background: #dce7fc;
+  border-color: #b9cbf8;
+}
+
+/* =========================================
+   FILTER BAR
+========================================= */
+
+.driver-report-filters {
+  display: grid;
+  grid-template-columns:
+    minmax(150px, 1.1fr)
+    minmax(140px, 0.8fr)
+    minmax(180px, 1.2fr);
+  gap: 11px;
+  margin-bottom: 23px;
+}
+
+.report-filter-field,
+.report-date-field {
+  min-width: 0;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  background: #ffffff;
+  border: 1px solid #f0a083;
+  border-radius: 7px;
+  color: #485466;
+}
+
+.report-filter-field select,
+.report-date-field input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #303947;
+  font-size: 10px;
+  font-family: inherit;
+}
+
+.report-filter-field select {
+  cursor: pointer;
+}
+
+.report-date-field input {
+  color: #303947;
+}
+
+/* Monthly / Daily */
+
+.report-period-tabs {
+  height: 38px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border: 1px solid #f0a083;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.report-period-tabs button {
+  background: transparent;
+  border: none;
+  color: #303947;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.report-period-tabs button:hover:not(.active) {
+  background: #fff0e9;
+}
+
+.report-period-tabs button.active {
+  background: #f4510b;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* =========================================
+   CHARTS LAYOUT
+========================================= */
+
+.driver-report-charts {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  gap: 17px;
+  margin-bottom: 23px;
+}
+
+.delivery-overview-card,
+.driver-performance-card {
+  min-width: 0;
+  min-height: 220px;
+  padding: 13px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.report-chart-heading {
+  min-height: 43px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 13px;
+}
+
+.report-chart-heading h2 {
+  margin-bottom: 5px;
+  color: #303947;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.report-chart-heading p {
+  color: #596477;
+  font-size: 9px;
+  line-height: 14px;
+}
+
+/* =========================================
+   CHART PERIOD TABS
+========================================= */
+
+.chart-period-tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.chart-period-tabs button {
+  height: 29px;
+  padding: 0 9px;
+  background: #ffffff;
+  border: 1px solid #f0a083;
+  border-radius: 7px;
+  color: #303947;
+  font-size: 9px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chart-period-tabs button:hover:not(.active) {
+  background: #fff0e9;
+}
+
+.chart-period-tabs button.active {
+  background: #f4510b;
+  border-color: #f4510b;
+  color: #ffffff;
+}
+
+/* =========================================
+   BAR CHART
+========================================= */
+
+.driver-bar-chart {
+  height: 145px;
+  display: grid;
+  grid-template-columns: 23px minmax(0, 1fr);
+  gap: 5px;
+}
+
+.driver-chart-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 18px;
+  color: #8993a2;
+  font-size: 8px;
+  text-align: right;
+}
+
+.driver-chart-main {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  padding-bottom: 20px;
+}
+
+.driver-chart-grid-lines {
+  position: absolute;
+  inset: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.driver-chart-grid-lines span {
+  width: 100%;
+  height: 1px;
+  background: #edf0f3;
+}
+
+.driver-chart-bars {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 3px;
+}
+
+.driver-chart-group {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.driver-bars {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+}
+
+.driver-bar {
+  width: min(35%, 9px);
+  min-height: 2px;
+  border-radius: 2px 2px 0 0;
+  transition: height 0.3s ease;
+}
+
+.driver-bar.current {
+  background: #5878d2;
+}
+
+.driver-bar.previous {
+  background: #8dcc72;
+}
+
+.driver-chart-label {
+  position: absolute;
+  bottom: 0;
+  height: 15px;
+  color: #748092;
+  font-size: 8px;
+  white-space: nowrap;
+}
+
+.driver-chart-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding-top: 5px;
+}
+
+.driver-chart-legend > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #596477;
+  font-size: 9px;
+}
+
+.driver-chart-legend i {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+}
+
+.legend-current {
+  background: #5878d2;
+}
+
+.legend-previous {
+  background: #8dcc72;
+}
+
+/* =========================================
+   DRIVER PERFORMANCE
+========================================= */
+
+.performance-heading {
+  margin-bottom: 7px;
+}
+
+.driver-performance-content {
+  min-height: 160px;
+  display: grid;
+  grid-template-columns: minmax(125px, 1fr) minmax(110px, 0.95fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.driver-donut-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.driver-donut-chart {
+  width: 145px;
+  height: 145px;
+  max-width: 100%;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: rotate(-90deg);
+}
+
+.driver-donut-chart::before {
+  content: "";
+  position: absolute;
+  inset: 19px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.driver-donut-center {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  transform: rotate(90deg);
+}
+
+.driver-donut-center strong {
+  color: #303947;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.driver-donut-center span {
+  color: #566273;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+/* Donut Legend */
+
+.driver-performance-legend {
+  min-width: 0;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 10px;
+  background: #4d5c71;
+  border-radius: 8px;
+}
+
+.performance-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.performance-legend-item i {
+  width: 14px;
+  height: 10px;
+  flex-shrink: 0;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+}
+
+.performance-legend-item span {
+  overflow: hidden;
+  color: #ffffff;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================
+   DRIVERS TABLE SECTION
+========================================= */
+
+.report-drivers-section {
+  width: 100%;
+  padding: 11px 10px 0;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.report-drivers-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px 12px;
+}
+
+.report-drivers-heading h2 {
+  color: #303947;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.report-drivers-heading span {
+  color: #8993a2;
+  font-size: 10px;
+}
+
+.report-drivers-table-wrapper {
+  width: 100%;
+  max-height: 320px;
+  overflow: auto;
+  border: 1px solid #e4e7ed;
+  border-radius: 11px;
+  scrollbar-width: thin;
+  scrollbar-color: #c4cad3 transparent;
+}
+
+.report-drivers-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+  font-size: 11px;
+}
+
+.report-drivers-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #4d5c71;
+  color: #ffffff;
+}
+
+.report-drivers-table th {
+  height: 38px;
+  padding: 0 11px;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.report-drivers-table th:first-child {
+  border-top-left-radius: 9px;
+}
+
+.report-drivers-table th:last-child {
+  border-top-right-radius: 9px;
+}
+
+.report-drivers-table td {
+  height: 51px;
+  padding: 6px 10px;
+  color: #303947;
+  border-bottom: 1px solid #e8ebef;
+  white-space: nowrap;
+}
+
+.report-drivers-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.report-drivers-table tbody tr:hover td {
+  background: #fafbfc;
+}
+
+/* =========================================
+   DRIVER NAME
+========================================= */
+
+.report-driver-name {
+  min-width: 155px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-driver-avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #e7edf5;
+  color: #5878d2;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.report-driver-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.report-driver-name > div:last-child {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.report-driver-name strong {
+  color: #303947;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.report-driver-name span {
+  color: #647080;
+  font-size: 9px;
+}
+
+/* STATUS */
+
+.report-driver-status {
+  min-width: 63px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 9px;
+  border-radius: 7px;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.report-driver-status.active {
+  background: #55d88b;
+}
+
+.report-driver-status.inactive {
+  background: #78818e;
+}
+
+.report-driver-earnings {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* ACTIONS */
+
+.report-driver-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.report-driver-actions button {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.report-edit-btn {
+  color: #edaa42;
+}
+
+.report-delete-btn {
+  color: #e74d55;
+}
+
+.report-edit-btn:hover {
+  background: #fff5e4;
+}
+
+.report-delete-btn:hover {
+  background: #fff0f0;
+}
+
+/* EMPTY STATE */
+
+.report-drivers-empty {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #8993a2;
+}
+
+.report-drivers-empty h3 {
+  color: #344054;
+  font-size: 14px;
+}
+
+.report-drivers-empty p {
+  font-size: 11px;
+}
+
+/* =========================================
+   EDIT MODAL
+========================================= */
+
+.report-edit-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(22, 30, 43, 0.48);
+  backdrop-filter: blur(4px);
+}
+
+.report-edit-modal {
+  width: 100%;
+  max-width: 440px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 13px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.report-edit-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.report-edit-header h2 {
+  margin-bottom: 6px;
+  color: #283342;
+  font-size: 19px;
+}
+
+.report-edit-header p {
+  color: #8993a2;
+  font-size: 11px;
+}
+
+.report-edit-header button {
+  width: 29px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 6px;
+  color: #606b79;
+  cursor: pointer;
+}
+
+.report-edit-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.report-edit-modal form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #344054;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.report-edit-modal input,
+.report-edit-modal select {
+  width: 100%;
+  height: 39px;
+  padding: 0 10px;
+  border: 1px solid #dfe3e9;
+  border-radius: 7px;
+  outline: none;
+  color: #344054;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.report-edit-modal input:focus,
+.report-edit-modal select:focus {
+  border-color: #f4510b;
+}
+
+.report-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  margin-top: 7px;
+}
+
+.report-edit-actions button {
+  min-height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 14px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.report-edit-actions button:first-child {
+  color: #596477;
+  background: #f5f6f8;
+  border: 1px solid #dfe3e9;
+}
+
+.report-edit-actions button:last-child {
+  color: #ffffff;
+  background: #f4510b;
+  border: 1px solid #f4510b;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1050px) {
+  .driver-report-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .driver-performance-content {
+    grid-template-columns: minmax(140px, 1fr) minmax(150px, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .driver-report-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .report-period-tabs {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .driver-report-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .driver-report-title h1 {
+    font-size: 19px;
+  }
+
+  .driver-report-stats {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .driver-report-stat {
+    min-height: 85px;
+  }
+
+  .driver-report-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .report-period-tabs {
+    grid-column: auto;
+  }
+
+  .report-chart-heading {
+    flex-direction: column;
+  }
+
+  .delivery-overview-card,
+  .driver-performance-card {
+    padding: 10px;
+  }
+
+  .chart-period-tabs {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .chart-period-tabs button {
+    flex: 1;
+  }
+
+  .driver-performance-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .driver-donut-chart {
+    width: 125px;
+    height: 125px;
+  }
+
+  .driver-donut-chart::before {
+    inset: 16px;
+  }
+
+  .driver-performance-legend {
+    padding: 9px 7px;
+    gap: 10px;
+  }
+
+  .performance-legend-item span {
+    font-size: 8px;
+  }
+
+  .report-drivers-section {
+    padding: 10px 5px 0;
+  }
+
+  .report-edit-modal {
+    padding: 19px;
+  }
+}
+
+/* PRINT */
+
+@media print {
+  .dashboard-sidebar,
+  .dashboard-topbar,
+  .driver-report-back,
+  .driver-report-filters,
+  .report-driver-actions,
+  .report-edit-overlay {
+    display: none !important;
+  }
+
+  .dashboard-content {
+    padding: 0 !important;
+  }
+
+  .driver-report-charts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.driver-chart-group {
+  position: relative;
+}
+
+.driver-chart-label {
+  left: 0;
+  width: 100%;
+  text-align: center;
+}

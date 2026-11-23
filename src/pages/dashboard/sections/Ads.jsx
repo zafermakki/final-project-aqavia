@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 
 import "./Ads.css";
+import { useNavigate } from "react-router-dom";
 
 /* =========================================
    DEMO IMAGES
@@ -118,6 +119,7 @@ function AdStatusToggle({ status, onChange }) {
 ========================================= */
 
 function Ads() {
+  const navigate = useNavigate();
   /* =========================================
      ADVERTISEMENTS STATE
   ========================================= */
@@ -260,11 +262,8 @@ function Ads() {
   ========================================= */
 
   const handleAddAd = () => {
-    setEditingId(null);
-    setFormData(emptyAd);
-    setFormError("");
-    setIsModalOpen(true);
-  };
+  navigate("/dashboard/ads/create");
+};
 
   /* =========================================
      OPEN EDIT MODAL

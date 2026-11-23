@@ -20,11 +20,15 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import Orders from "./pages/dashboard/sections/Orders";
 import Restaurants from "./pages/dashboard/sections/Restaurants";
 import Drivers from "./pages/dashboard/sections/Drivers";
+import DriverReports from "./pages/dashboard/sections/DriverReports";
 import Customers from "./pages/dashboard/sections/Customers";
 import Coupons from "./pages/dashboard/sections/Coupons";
 import Ads from "./pages/dashboard/sections/Ads";
 import RevertsFee from "./pages/dashboard/sections/RevertsFee";
 import DeliverySettings from "./pages/dashboard/sections/DeliverySettings";
+import AdForm from "./pages/dashboard/sections/AdForm";
+import AddDriver from "./pages/dashboard/sections/AddDriver";
+import CreateOrder from "./pages/dashboard/sections/CreateOrder";
 
 function App() {
   return (
@@ -47,16 +51,23 @@ function App() {
         <Route index element={<Dashboard />} />
 
         <Route path="orders" element={<Orders />} />
+        <Route path="orders/create" element={<CreateOrder />}/>
 
         <Route path="restaurants" element={<Restaurants />} />
 
         <Route path="drivers" element={<Drivers />} />
+        <Route path="drivers/create" element={<AddDriver />}/>
+        <Route path="drivers/reports" element={<DriverReports />}/>
 
         <Route path="customers" element={<Customers />} />
 
         <Route path="coupons" element={<Coupons />} />
 
         <Route path="ads" element={<Ads />} />
+
+        <Route path="ads/create" element={<AdForm />} />
+
+        <Route path="ads/:id/edit" element={<AdForm />} />
 
         <Route path="reverts-fee" element={<RevertsFee />} />
 

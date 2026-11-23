@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 
 import "./Drivers.css";
+import { useNavigate } from "react-router-dom";
 
 /* =========================================
    INITIAL DEMO DRIVERS
@@ -177,6 +178,7 @@ function DriverAvatar({ name, id }) {
 function Drivers() {
   /* Drivers State */
 
+  const navigate = useNavigate();
   const [drivers, setDrivers] = useState(() => {
     try {
       const saved = localStorage.getItem("aqavia_drivers");
@@ -327,11 +329,8 @@ function Drivers() {
   ========================================= */
 
   const handleAddDriver = () => {
-    setEditingId(null);
-    setFormData(emptyDriver);
-    setFormError("");
-    setIsModalOpen(true);
-  };
+  navigate("/dashboard/drivers/create");
+};
 
   /* =========================================
      OPEN EDIT MODAL
@@ -542,7 +541,7 @@ function Drivers() {
           <button
             type="button"
             className="view-reports-btn"
-            onClick={() => setIsReportOpen(true)}
+            onClick={() => navigate("/dashboard/drivers/reports")}
           >
             <FileText size={16} />
             View reports

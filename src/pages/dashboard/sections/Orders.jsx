@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 
 import "./Orders.css";
+import { useNavigate } from "react-router-dom";
 
 /* =========================================
    INITIAL DEMO DATA
@@ -350,7 +351,7 @@ function Orders() {
       color: "blue",
     },
   ];
-
+  const navigate = useNavigate();
   /* =========================================
      RENDER
   ========================================= */
@@ -378,7 +379,7 @@ function Orders() {
         <button
           type="button"
           className="create-order-btn"
-          onClick={openCreateModal}
+          onClick={() => navigate("/dashboard/orders/create")}
         >
           <PlusCircle size={16} />
           Create order

@@ -1,0 +1,646 @@
+
+/* =========================================
+   ADD DRIVER PAGE
+========================================= */
+
+.add-driver-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #303947;
+}
+
+/* HEADER */
+
+.add-driver-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 13px;
+}
+
+.add-driver-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #273344;
+}
+
+.add-driver-heading h1 {
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.add-driver-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8993a2;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.add-driver-breadcrumb a {
+  color: #596477;
+  text-decoration: none;
+}
+
+.add-driver-breadcrumb a:hover {
+  color: #f4510b;
+}
+
+.add-driver-breadcrumb span:last-child {
+  color: #303947;
+  font-weight: 600;
+}
+
+/* DESCRIPTION */
+
+.add-driver-description {
+  max-width: 850px;
+  margin-bottom: 19px;
+  color: #303947;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.add-driver-section-title {
+  margin: 0 0 13px 7px;
+  color: #303947;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.add-driver-card {
+  width: 100%;
+  padding: 17px;
+  background: #ffffff;
+  border: 1px solid #d7d9dd;
+  border-radius: 12px;
+}
+
+.add-driver-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.add-driver-left,
+.add-driver-right {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.add-driver-left > h3,
+.add-driver-right > h3 {
+  margin-bottom: 7px;
+  color: #303947;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* =========================================
+   IMAGE UPLOAD
+========================================= */
+
+.driver-drop-zone {
+  width: 100%;
+  height: 130px;
+  padding: 8px;
+  overflow: hidden;
+  background: #f1f1f1;
+  border: 1px solid #bfc1c5;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.driver-drop-zone.dragging {
+  border: 2px dashed #f4510b;
+  background: #fff4ed;
+}
+
+.driver-hidden-file {
+  display: none;
+}
+
+.driver-drop-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: #ffffff;
+  border-radius: 7px;
+  color: #647080;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.driver-drop-content svg {
+  color: #6e84ff;
+}
+
+.driver-drop-content small {
+  color: #a0a7b2;
+  font-size: 9px;
+}
+
+.driver-uploaded-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #e9edf1;
+  border-radius: 7px;
+}
+
+.driver-uploaded-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.driver-uploaded-image button {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 36, 45, 0.75);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.driver-change-photo {
+  width: 145px;
+  height: 31px;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f3fb;
+  color: #303947;
+  border: 1px solid #c8c2dc;
+  border-radius: 7px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.driver-change-photo:hover {
+  background: #ece7fa;
+}
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.driver-form-field {
+  width: 100%;
+  min-width: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 10px;
+  background: #ffffff;
+  border: 1px solid #f2a17b;
+  border-radius: 8px;
+  color: #354052;
+  transition: 0.2s;
+}
+
+.driver-form-field:focus-within {
+  border-color: #f4510b;
+  box-shadow: 0 0 0 2px rgba(244, 81, 11, 0.08);
+}
+
+.driver-form-field > svg {
+  flex-shrink: 0;
+}
+
+.driver-form-field input,
+.driver-form-field select {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #303947;
+  font-family: inherit;
+  font-size: 10px;
+}
+
+.driver-form-field input::placeholder {
+  color: #657080;
+  opacity: 1;
+}
+
+.driver-form-field select {
+  cursor: pointer;
+}
+
+.driver-password-toggle {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #596477;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================================
+   VEHICLE FIELDS
+========================================= */
+
+.driver-vehicle-fields {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+/* =========================================
+   WORK TIME
+========================================= */
+
+.driver-work-time {
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
+
+.driver-work-time-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #303947;
+  font-size: 11px;
+  font-weight: 550;
+}
+
+.driver-time-labels,
+.driver-preview-time-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 5px;
+  color: #596477;
+  font-size: 9px;
+}
+
+.driver-time-labels span:last-child,
+.driver-preview-time-labels span:last-child {
+  padding-left: 12px;
+  border-left: 1px solid #9da5af;
+}
+
+.driver-time-fields {
+  height: 39px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+.driver-time-fields input {
+  width: 100%;
+  min-width: 0;
+  padding: 0 7px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #303947;
+  font-family: inherit;
+  font-size: 10px;
+}
+
+.driver-time-fields input:last-child {
+  border-left: 1px solid #9da5af;
+}
+
+/* =========================================
+   STATUS SELECTOR
+========================================= */
+
+.driver-status-selector,
+.driver-preview-status {
+  width: 100%;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #f2a17b;
+  border-radius: 8px;
+}
+
+.driver-status-selector button,
+.driver-preview-status button {
+  background: transparent;
+  border: none;
+  color: #303947;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.driver-status-selector button.selected,
+.driver-preview-status button.selected {
+  background: #f4510b;
+  color: #ffffff;
+}
+
+/* =========================================
+   RIGHT SIDE PREVIEW
+========================================= */
+
+.add-driver-right {
+  padding-left: 7px;
+}
+
+.driver-preview-image {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #edf0f3;
+  border: 1px solid #e1e5e9;
+  border-radius: 9px;
+  margin-bottom: 7px;
+}
+
+.driver-preview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.driver-preview-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  color: #a0a7b2;
+  font-size: 10px;
+}
+
+/* PREVIEW FIELDS */
+
+.driver-preview-field {
+  width: 100%;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 9px;
+  background: #ffffff;
+  border: 1px solid #f2a17b;
+  border-radius: 8px;
+  color: #354052;
+}
+
+.driver-preview-field svg {
+  flex-shrink: 0;
+}
+
+.driver-preview-field span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: #303947;
+  font-size: 10px;
+}
+
+/* PREVIEW VEHICLE */
+
+.driver-preview-vehicle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+.driver-preview-vehicle > div {
+  min-width: 0;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 8px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #f2a17b;
+  border-radius: 8px;
+}
+
+.driver-preview-vehicle svg {
+  flex-shrink: 0;
+}
+
+.driver-preview-vehicle span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 10px;
+}
+
+/* PREVIEW WORK TIME */
+
+.driver-preview-work-time {
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+
+.driver-preview-times {
+  height: 39px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+.driver-preview-times span {
+  padding: 0 7px;
+  color: #303947;
+  font-size: 10px;
+}
+
+.driver-preview-times span:last-child {
+  border-left: 1px solid #9da5af;
+}
+
+/* =========================================
+   CREATE BUTTON
+========================================= */
+
+.driver-create-btn {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f5f3fb;
+  border: 1px solid #c8c2dc;
+  border-radius: 8px;
+  color: #303947;
+  font-size: 10px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.driver-create-btn:hover {
+  background: #ece7fa;
+  border-color: #a99bcf;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.driver-form-error {
+  margin-top: 12px;
+  padding: 9px 11px;
+  color: #c53c26;
+  background: #fff0ed;
+  border: 1px solid #ffc5b6;
+  border-radius: 6px;
+  font-size: 10px;
+}
+
+/* =========================================
+   BOTTOM ACTIONS
+========================================= */
+
+.driver-bottom-actions {
+  display: grid;
+  grid-template-columns: 135px 135px;
+  gap: 8px;
+  margin-top: 9px;
+}
+
+.driver-bottom-actions button {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.driver-save-continue {
+  background: #ffe4b6;
+  border: 1px solid #e6b66e;
+  color: #303947;
+}
+
+.driver-save-continue:hover {
+  background: #ffd99b;
+}
+
+.driver-clear-btn {
+  background: #f5f3fb;
+  border: 1px solid #c8c2dc;
+  color: #ed454b;
+}
+
+.driver-clear-btn:hover {
+  background: #fff0f0;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .add-driver-grid {
+    gap: 18px;
+  }
+
+  .driver-preview-image {
+    height: 150px;
+  }
+}
+
+@media (max-width: 700px) {
+  .add-driver-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .add-driver-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-driver-right {
+    padding: 15px 0 0;
+    border-top: 1px solid #e9edf1;
+  }
+
+  .driver-preview-image {
+    height: 220px;
+  }
+
+  .driver-bottom-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-driver-card {
+    padding: 12px;
+  }
+
+  .add-driver-heading h1 {
+    font-size: 17px;
+  }
+
+  .add-driver-description {
+    font-size: 11px;
+    line-height: 17px;
+  }
+
+  .driver-vehicle-fields {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .driver-vehicle-fields .driver-form-field {
+    padding: 0 6px;
+    gap: 5px;
+  }
+
+  .driver-preview-image {
+    height: 190px;
+  }
+
+  .driver-bottom-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
