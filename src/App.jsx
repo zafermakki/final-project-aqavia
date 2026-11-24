@@ -29,6 +29,8 @@ import DeliverySettings from "./pages/dashboard/sections/DeliverySettings";
 import AdForm from "./pages/dashboard/sections/AdForm";
 import AddDriver from "./pages/dashboard/sections/AddDriver";
 import CreateOrder from "./pages/dashboard/sections/CreateOrder";
+import AddRestaurant from "./pages/dashboard/sections/AddRestaurant";
+import AddMeal from "./pages/dashboard/sections/AddMeal";
 
 function App() {
   return (
@@ -54,6 +56,8 @@ function App() {
         <Route path="orders/create" element={<CreateOrder />}/>
 
         <Route path="restaurants" element={<Restaurants />} />
+        <Route path="restaurants/create" element={<AddRestaurant />}/>
+        <Route path="restaurants/meals/create" element={<AddMeal />}/>
 
         <Route path="drivers" element={<Drivers />} />
         <Route path="drivers/create" element={<AddDriver />}/>

@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 
 import "./Restaurants.css";
+import { useNavigate } from "react-router-dom";
 
 /* =========================================
    RESTAURANT CATEGORIES
@@ -386,6 +387,7 @@ function Restaurants() {
       previous.filter((restaurant) => restaurant.id !== id)
     );
   };
+  const navigate = useNavigate();
 
   /* =========================================
      RENDER
@@ -412,15 +414,28 @@ function Restaurants() {
           </p>
 
         </div>
+        <div className="restaurants-header-actions">
 
         <button
           type="button"
           className="add-restaurant-btn"
-          onClick={openCreateModal}
+          onClick={() => navigate("/dashboard/restaurants/meals/create")}
+        >
+          <UtensilsCrossed size={16} />
+          Add meals
+        </button>
+
+        <button
+          type="button"
+          className="add-restaurant-btn"
+          onClick={() => navigate("/dashboard/restaurants/create")}
         >
           <PlusCircle size={16} />
           Add restaurant
         </button>
+
+</div>
+
 
       </div>
 
