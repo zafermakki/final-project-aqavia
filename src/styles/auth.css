@@ -210,7 +210,7 @@
   background: transparent;
 
   font-family: inherit;
-  font-size: 8px;
+  font-size: 13px;
   font-weight: 400;
   color: #222;
 }
@@ -282,7 +282,7 @@
   color: #fff;
 
   font-family: inherit;
-  font-size: 7px;
+  font-size: 13px;
   font-weight: 600;
 
   cursor: pointer;
@@ -303,8 +303,8 @@
 
   margin: 14px 0 0;
 
-  font-size: 7px;
-  line-height: 10px;
+  font-size: 12px;
+  line-height: 16px;
 
   color: rgba(255, 255, 255, 0.85);
 }
@@ -449,7 +449,7 @@
   }
 
   .auth-input input {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .auth-input > svg {

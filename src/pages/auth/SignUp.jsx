@@ -16,12 +16,7 @@ function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (password !== confirmPassword) {
-      setMessage("Passwords do not match!");
-      return;
-    }
     navigate("/verification");
-
   };
 
   return (
@@ -46,7 +41,6 @@ function SignUp() {
             placeholder="Enter full name"
             aria-label="Full name"
             autoComplete="name"
-            required
           />
 
           <AuthField
@@ -56,7 +50,6 @@ function SignUp() {
             placeholder="Enter number"
             aria-label="Phone number"
             autoComplete="tel"
-            required
           />
 
           <AuthField
@@ -66,7 +59,6 @@ function SignUp() {
             placeholder="Enter password"
             aria-label="Password"
             autoComplete="new-password"
-            minLength={6}
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             required
@@ -79,7 +71,6 @@ function SignUp() {
             placeholder="Enter password"
             aria-label="Confirm password"
             autoComplete="new-password"
-            minLength={6}
             value={confirmPassword}
             onChange={(event) => setConfirmPassword(event.target.value)}
             required

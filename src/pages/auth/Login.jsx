@@ -1,18 +1,19 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import AuthLayout from "../../components/auth/AuthLayout";
 import AuthField from "../../components/auth/AuthField";
 import AuthIcon from "../../components/auth/AuthIcon";
 
 function Login() {
+  const navigate = useNavigate();
   const [message, setMessage] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    setMessage("Login form is ready to connect to the API.");
+    navigate("/dashboard");
   };
 
   return (
@@ -37,7 +38,6 @@ function Login() {
             placeholder="Enter full name"
             aria-label="Full name"
             autoComplete="username"
-            required
           />
 
           <AuthField
@@ -47,7 +47,6 @@ function Login() {
             placeholder="Enter password"
             aria-label="Password"
             autoComplete="current-password"
-            required
           />
 
         </div>

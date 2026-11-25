@@ -1,9 +1,11 @@
 
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import AuthLayout from "../../components/auth/AuthLayout";
 
 function Verification() {
+  const navigate = useNavigate();
   const [code, setCode] = useState(Array(6).fill(""));
   const [message, setMessage] = useState("");
 
@@ -93,18 +95,7 @@ function Verification() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const verificationCode = code.join("");
-
-    if (verificationCode.length !== 6) {
-      setMessage("Please enter the complete 6-digit code.");
-      return;
-    }
-
-    setMessage(
-      "Code entered successfully. Ready for API verification."
-    );
-
-    console.log("Verification Code:", verificationCode);
+    navigate("/login");
   };
 
   return (
